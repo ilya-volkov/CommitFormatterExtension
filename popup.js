@@ -2,6 +2,7 @@
 // 1. Polish UI (use bootstrap from tweeter, http://twitter.github.com/bootstrap/base-css.html)
 // 2. Implement copy to clipboard functionality
 // 3. Activate only on a bug description page
+// 4. Add bootstrap as submodule
 
 document.addEventListener('DOMContentLoaded', function () {
     chrome.tabs.getSelected(null, function (tab) {        

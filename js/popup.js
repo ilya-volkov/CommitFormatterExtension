@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {    
-    chrome.tabs.query({ active: true }, function (tabs) {        
+    chrome.tabs.query({
+        active: true,        
+        windowId: chrome.windows.WINDOW_ID_CURRENT
+    }, function (tabs) {
         chrome.tabs.sendRequest(tabs[0].id, { action: "collectBugInfo" }, function (response) {
             var message = 'BugFix: ' + response.id + ': ' + response.description;
 

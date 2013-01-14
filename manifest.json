@@ -5,20 +5,33 @@
   "description": "This extension generates commit message for a bug fix",
   "version": "1.0",
 
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
+  "background" : {
+    "scripts": ["js/background.js"]
   },
 
+  "page_action": {
+    "default_icon": {
+      "19": "img/icon.png"     
+    },
+    "default_title": "Generate bug fix commit message",
+    "default_popup": "popup.html"
+  },
+    
   "permissions": [
     "tabs",
-	"clipboardWrite"
+	"clipboardWrite"	
   ],
 
   "content_scripts": [
 	{ 
-	  "matches": ["https://tp.intermedia.net/*"], 
-	  "js": ["dom.js"] 
+	  "matches": [
+		"http://*/*",
+        "https://*/*"
+	  ], 
+	  "js": [
+		"js/jquery.js", 
+		"js/dom.js"
+	  ] 
     }
   ]
 }

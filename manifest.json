@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Bug fix commit message generator",
+  "description": "This extension generates commit message for a bug fix",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "tabs"
+  ],
+
+  "content_scripts": [
+	{ 
+	  "matches": ["https://tp.intermedia.net/*"], 
+	  "js": ["dom.js"] 
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bug fix commit message generator</title>
+    <style>
+      body {
+        min-width: 357px;
+        overflow-x: hidden;
+      }   
+    </style>    
+    <script src="popup.js"></script>
+  </head>
+  <body>
+      <div>
+        <span>Bug number:</span>
+        <span id="bugNumber"></span>
+      </div>
+      <div>
+        <span>Description:</span>
+        <span id="description"></span>
+      </div>
+      <div>
+        <blockquote>
+            <p id="message"></p>
+        </blockquote>        
+        <button type="button" id="copyToClipboard" style="border: 0; background: transparent">
+            <img src="copy_to_clipboard.png" width="16" height="16" />
+        </button>
+      </div>  
+  </body>
+</html>
+

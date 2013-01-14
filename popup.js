@@ -1,9 +1,3 @@
-// TODO: 
-// 1. Polish UI (use bootstrap from tweeter, http://twitter.github.com/bootstrap/base-css.html)
-// 2. Implement copy to clipboard functionality
-// 3. Activate only on a bug description page
-// 4. Add bootstrap as submodule
-
 document.addEventListener('DOMContentLoaded', function () {
     chrome.tabs.getSelected(null, function (tab) {        
         chrome.tabs.sendRequest(tab.id, { action: "getDOM" }, function (response) {
@@ -15,6 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
             bugNumber.innerText = response.id;
             description.innerText = response.description;
             message.innerText = 'BugFix: ' + response.id + ': ' + response.description;
+            
+            var input = document.getElementById('hiddenInput');
+            input.value = message.innerText;
+            input.focus();
+            input.select();
+            document.execCommand('Copy');
         });
     });
 });

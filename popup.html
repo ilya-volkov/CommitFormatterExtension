@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Bug fix commit message generator</title>
+    <title>Commit Message Generator</title>
     <link href="modules/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <style>
       body {
@@ -19,7 +19,16 @@
           z-index: -1; 
           left: 50%; 
           top: 50%;
+      }
+
+      .list-term {
+          width: 70px !important; 
+          text-align: left !important;
       }     
+
+      .list-definition {
+          margin-left: 80px !important;
+      }
     </style>    
     <script src="js/popup.js"></script>
     <script src="js/jquery.js"></script>
@@ -28,10 +37,10 @@
   <body>
     <div class="main-container">
         <dl class="dl-horizontal">
-            <dt style="width: 90px; text-align: left;">Bug number</dt>
-            <dd style="margin-left: 100px;" class="bug-number"></dd>
-            <dt style="width: 90px; text-align: left;">Description</dt>
-            <dd style="margin-left: 100px;" class="description"></dd>
+            <dt class="list-term">Number</dt>
+            <dd class="number list-definition" />
+            <dt class="list-term">Name</dt>
+            <dd class="name list-definition"></dd>            
         </dl>        
         <blockquote>
             <div class="message"></div>

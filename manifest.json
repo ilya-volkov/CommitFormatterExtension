@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "Bug fix commit message generator",
-  "description": "This extension generates commit message for a bug fix",
-  "version": "1.0",
+  "name": "Commit message generator",
+  "description": "This extension generates commit message",
+  "version": "1.1",
 
   "background" : {
     "scripts": ["js/background.js"]
@@ -11,9 +11,9 @@
 
   "page_action": {
     "default_icon": {
-      "19": "img/icon.png"     
+      "19": "img/icon.ico"     
     },
-    "default_title": "Generate bug fix commit message",
+    "default_title": "Generate commit message",
     "default_popup": "popup.html"
   },
     

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (response.type == 'bug') {
                 var message = 'BugFix: ' + response.id + ': ' + response.title;
             } 
-            else if (response.type == 'userstory') {
+            else if (response.type == 'userstory' || response.type == 'task') {
                 var message = 'Task: ' + response.id + ': *' + response.title + '*';
             }            
             

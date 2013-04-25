@@ -6,7 +6,7 @@ chrome.extension.onRequest.addListener(function (request, sender, sendResponse) 
         sendResponse({
             type: parts[parts.length - 1],
             id: $('.entity-id A').text(),
-            title: $('.entity-title').clone().children().remove().end().text()
+            title: $('.ui-title__title').text()
         });
     }
     else
